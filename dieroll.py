@@ -11,19 +11,15 @@ success = 0
 
 for i in range(numtrials):
 	outcomes = []
-	numtrios = 0
 
 	# Generate 6 die throw results
 	for roll in range(6): 
 		outcome = np.random.randint(1, 7)
 		outcomes.append(outcome)
 
-	# Set will have length 4 iff only one number was repeated 3 times. 
-	for num in range(6):
-		if outcomes.count(num) == 3:
-			numtrios += 1
+	elements, counts = np.unique(outcomes, return_counts = True)
 
-	if numtrios == 1:
+	if np.count_nonzero(counts == 3) == 1:
 		success += 1
 
 	if (i + 1) % 10000 == 0:
