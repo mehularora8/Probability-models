@@ -6,7 +6,7 @@
 # Do NOT add any other import statements.
 # Don't remove this import statement.
 import numpy as np
-from probabilities import *
+from inference_probabilities import *
 
 """
 Starter Code for CS 109 Problem Set 4
