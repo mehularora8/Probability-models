@@ -106,11 +106,15 @@ def question_lr_b(clf, train_features, train_labels, test_features, test_labels)
 
     preds = clf.predict(test_features)
     true = 0
+    total = 0
     for i in range(len(test_labels)):
-        if test_labels[i] == preds[i]:
+        if test_labels[i] == 1 and preds[i] == 1:
             true += 1
+            
+        if preds[i] == 1:
+            total += 1
 
-    res = true / len(test_labels)
+    res = true / total
     return res
 
 def question_lr_c(clf, train_features, train_labels, test_features, test_labels):
@@ -123,9 +127,9 @@ def question_lr_c(clf, train_features, train_labels, test_features, test_labels)
     for i in range(len(test_labels)):
         if test_labels[i] == 1 and preds[i] == 1:
             true += 1
-        elif test_labels[i] == 1:
+        elif test_labels[i] == 1 and preds[i] == 0:
             total += 1
 
-    res = true / total
-
+    res = true / (true + total)
+    print(res)
     return res
