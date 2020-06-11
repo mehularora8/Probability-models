@@ -5,19 +5,7 @@ import math
 import numpy as np
 
 """
-Starter Code for CS 109 Problem Set 6
-Written by Tim Gianitsos
-Comments by Alex Tsun and Anand Shankar
-
-*************************IMPORTANT*************************
-Do NOT modify the name of any functions. Do not add or remove
-parameters to them either. Moreover, make sure your return
-value is exactly as described in the PDF handout and in the
-provided function comments. Remember that your code is being
-autograded. You are free to write helper functions if you so
-desire but they are not necessary. Do NOT rename this file.
-Do NOT modify any code outside the begin and end code markers.
-*************************IMPORTANT*************************
+Started from code for CS109 Problem Set 6.
 """
 
 def sigmoid(vec):
